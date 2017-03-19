@@ -1,1 +1,5 @@
-init commit
+This project is the week 7 CRUD project for Skill Distillery written by Greg
+Taylor utilizing SpringMVC and gradle.  The subject for this project was
+Gnomes.  From the homepage you can see a randomized list of all the gnomes in the park(world of gnomes), a list of only gnomes in any of the four colonies, make your own gnome, edit a gnome by name(Randomized list provided in case you don't know the name of a gnome, if you created a gnome it will be available for edit as well), or delete a gnome by name(again a list is provided and if you created a gnome you can delete it as well).
+
+In the future I might like to add some animations for the different pages and maybe pictures of the individual gnomes as well as increase the encapsulation, the project was changed from 4 gnomes(one from each species no names.) to five from each species with names, and the number of files that had to be changed to accomodate that was higher than I had expected, with better encapsulation I hope to be able to make small changes in one location without it effecting the other pages involved in the site.
