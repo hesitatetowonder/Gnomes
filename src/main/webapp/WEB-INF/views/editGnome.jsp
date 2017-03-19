@@ -1,21 +1,28 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
 <html>
 <head>
-	<title>Welcome to Gnome's World!</title>
+<title>Welcome to Gnome's World!</title>
 </head>
 <body>
 
 
-What species would you like to edit?
-<form action="editChoice.do" method="POST">
-<select name="type">
-<option value="House Gnome">House Gnomes</option>
-<option value="Farm Gnome">Farm Gnomes</option>
-<option value="Dune Gnome">Dune Gnomes</option>
-<option value="Forest Gnome">Forest Gnomes</option>
-</select><br>
-<button type="submit">Go</button>
-</form>
+	What is the name of the Gnome you wish to edit? Here is a list to
+	refresh your memory:
+
+	<ol>
+		<c:forEach var="gnome" items="${gnomes}">
+
+			<li>${gnome}</li>
+
+		</c:forEach>
+	</ol>
+	<br> Name:
+	<br>
+	<form action="editChoice.do" method="GET">
+	<input type="text" name="name">
+	<button type="submit">submit</button>
+	<br>
+	</form>
 </body>
 </html>

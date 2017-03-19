@@ -13,7 +13,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 public class GnomeDAOImpl implements GnomeDAO {
 		
-	private static final String FILE="/WEB-INF/Gnomes.csv";
+	private static final String FILE="/WEB-INF/GnomeNames.csv";
 	private List<Gnome> gnomes = new ArrayList<>();
 	
 	@Autowired 
@@ -29,12 +29,13 @@ public class GnomeDAOImpl implements GnomeDAO {
 				) {
 				String line;
 				while ((line = input.readLine()) != null) {
-					String[] gnomeAtt = line.split(",");
-					String species = gnomeAtt[0];
-					String height = gnomeAtt[1];
-					String weight = gnomeAtt[2];
-					String lifeExpectancy = gnomeAtt[3];
-					gnomes.add(new Gnome(species, height, weight, lifeExpectancy));
+					String[] gnomeAtt = line.split(", ");
+					String name = gnomeAtt[0];
+					String species = gnomeAtt[1];
+					String height = gnomeAtt[2];
+					String weight = gnomeAtt[3];
+					String lifeExpectancy = gnomeAtt[4];
+					gnomes.add(new Gnome(name, species, height, weight, lifeExpectancy));
 				}
 			} catch (Exception e) {
 				System.err.println(e);
@@ -50,20 +51,19 @@ public class GnomeDAOImpl implements GnomeDAO {
 		List<Gnome> gnomeSpecies = new ArrayList<>();
 		for (Gnome gnomen : gnomes) {
 			if (gnome.equalsIgnoreCase(gnomen.getSpecies())){
-				System.out.println(gnomen);
 				gnomeSpecies.add(gnomen);
 			}
 		}
 	return gnomeSpecies;
 	}
 
-	public List<Gnome> getSpeciesByHeight(String gnome) {
-		List<Gnome> gnomeHeight = new ArrayList<>();
+	public List<Gnome> getGnomeByName(String gnome) {
+		List<Gnome> gnomeName = new ArrayList<>();
 		for (Gnome gnomen : gnomes) {
-			if (gnome.equalsIgnoreCase(gnomen.getHeight()))
-				gnomeHeight.add(gnomen);
+			if (gnome.equalsIgnoreCase(gnomen.getName()))
+				gnomeName.add(gnomen);
 		}
-	return gnomeHeight;
+	return gnomeName;
 		
 	}
 
@@ -76,9 +76,10 @@ public class GnomeDAOImpl implements GnomeDAO {
 	return gnomeWeight;
 	}
 
-	public List<Gnome> createNewGnome(Gnome fred) {
+	public Gnome createNewGnome(Gnome fred) {
 		gnomes.add(fred);
-		return gnomes;
+		int i = gnomes.size();
+		return gnomes.get(i-1);
 	}
 	
 

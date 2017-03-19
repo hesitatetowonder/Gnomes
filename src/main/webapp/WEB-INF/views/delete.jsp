@@ -11,20 +11,22 @@
 	<audio controls>
 		<source src="images/mood.mp3" type="audio/mp3">
 	</audio>
-	<br> Now to our bloody business. Which Gnome were you wanting to
-	delete?
+	<br> Now to our bloody business. Which Gnome hath wronged you and
+	deserves death? In case death is trivial to you and you have forgotten
+	the name here is a list:
+	<br>
+	<ol>
+		<c:forEach var="gnome" items="${gnomes}">
+
+			<li>${gnome}</li>
+
+		</c:forEach>
+	</ol>
+	<br> Name:
+	<br>
 	<form action="delete.do" method="GET">
-		<fieldset>
-			<p>
-				<label>Select Species</label> <select name = species>
-					<option value="House Gnome">House</option>
-					<option value="Dune Gnome">Dune</option>
-					<option value="Forest Gnome">Forest</option>
-					<option value="Farm Gnome">Farm</option>
-				</select>
-			</p>
-			<button type=submit>KILL!!!!!!uh.....delete</button>
-		</fieldset>
+		<input type="text" name="name">
+		<button type="submit">Kill!</button>
 	</form>
 </body>
 </html>

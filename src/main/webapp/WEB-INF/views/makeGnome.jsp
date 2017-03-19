@@ -11,7 +11,11 @@
 	<form action="makeIt.do" method="GET">
 		<fieldset>
 			<p>
-				<label>Select Species</label> <select name="species">
+			Most important field.....Your Gnomes name:]<br>
+			<input type="text" name="name">
+			<br>
+		
+				<label>Select Species</label><select name="species">
 					<option value="House Gnome">House</option>
 					<option value="Dune Gnome">Dune</option>
 					<option value="Forest Gnome">Forest</option>
@@ -37,4 +41,4 @@
 		</fieldset>
 	</form>
 	<br>
-	You will be returned to the home page after addition, select species to view your addition in the list.
+	You will be returned to the home page after addition, Revisit the species habitat to see you gnome.

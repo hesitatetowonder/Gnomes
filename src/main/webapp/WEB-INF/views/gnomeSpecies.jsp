@@ -16,7 +16,7 @@
 	
 <form>Thanks for visiting</form>
 <form action="home.do" method="GET">
-<button type = submit> Click here to return to Index</button>
+<button type = submit> Click here to return Home</button>
 </form>
 
 
