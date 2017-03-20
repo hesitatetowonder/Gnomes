@@ -2,19 +2,19 @@ package data;
 
 public class Gnome {
 	
-private String name, species, height, weight, lifeExpectancy;
+private String name, species, height, weight, age;
 
 public Gnome(){
 
 }
 
-public Gnome(String name, String species, String height, String weight, String lifeExpectancy) {
+public Gnome(String name, String species, String height, String weight, String age) {
 	super();
 	this.name = name;
 	this.species = species;
 	this.height = height;
 	this.weight = weight;
-	this.lifeExpectancy = lifeExpectancy;
+	this.age = age;
 }
 
 public String getName() {
@@ -49,18 +49,18 @@ public void setWeight(String weight) {
 	this.weight = weight;
 }
 
-public String getLifeExpectancy() {
-	return lifeExpectancy;
+public String age() {
+	return age;
 }
 
-public void setLifeExpectancy(String lifeExpectancy) {
-	this.lifeExpectancy = lifeExpectancy;
+public void setLifeExpectancy(String age) {
+	this.age = age;
 }
 
 @Override
 public String toString() {
 	return "Name: " + name + "	Species: " + species + "	Height: " + height + "	Weight: " + weight 
-			+ "	Life Expectancy: " + lifeExpectancy;
+			+ "	age: " + age;
 }
 
 

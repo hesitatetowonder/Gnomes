@@ -20,7 +20,7 @@ Weight:
 <input type="text" name="weight" value="${weight}">
 <br>
 Life Expectancy:
-<input type="text" name="lifeExpectancy" value="${lifeExpectancy}">
+<input type="text" name="age" value="${age}">
 <br>
 <button type="submit">Done</button>
 </form>

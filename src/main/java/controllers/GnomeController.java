@@ -74,7 +74,7 @@ public class GnomeController {
 		mv.addObject("name" , gnomes.get(0).getName());
 		mv.addObject("height", gnomes.get(0).getHeight());
 		mv.addObject("weight", gnomes.get(0).getWeight());
-		mv.addObject("lifeExpectancy", gnomes.get(0).getLifeExpectancy());
+		mv.addObject("age", gnomes.get(0).age());
 		mv.setViewName("editing");
 		return mv;
 	}

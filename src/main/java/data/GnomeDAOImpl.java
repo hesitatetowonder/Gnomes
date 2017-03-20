@@ -34,8 +34,8 @@ public class GnomeDAOImpl implements GnomeDAO {
 					String species = gnomeAtt[1];
 					String height = gnomeAtt[2];
 					String weight = gnomeAtt[3];
-					String lifeExpectancy = gnomeAtt[4];
-					gnomes.add(new Gnome(name, species, height, weight, lifeExpectancy));
+					String age = gnomeAtt[4];
+					gnomes.add(new Gnome(name, species, height, weight, age));
 				}
 			} catch (Exception e) {
 				System.err.println(e);
@@ -67,14 +67,6 @@ public class GnomeDAOImpl implements GnomeDAO {
 		
 	}
 
-	public List<Gnome> getSpeciesByWeight(String gnome) {
-		List<Gnome> gnomeWeight = new ArrayList<>();
-		for (Gnome gnomen : gnomes) {
-			if (gnome.equalsIgnoreCase(gnomen.getWeight()))
-				gnomeWeight.add(gnomen);
-		}
-	return gnomeWeight;
-	}
 
 	public Gnome createNewGnome(Gnome fred) {
 		gnomes.add(fred);

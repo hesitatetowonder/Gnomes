@@ -30,7 +30,7 @@
 					<option value="30 lbs">30 lbsfeet</option>
 					<option value="45 lbs">45 lbs</option>
 					<option value="60 lbs">60 lbs</option>
-				</select> <label>Select Life Expectancy</label> <select name="lifeExpectancy">
+				</select> <label>Select Age</label> <select name="age">
 					<option value="400 years">400 years</option>
 					<option value="450 years">450 years</option>
 					<option value="500 years">500 years</option>
